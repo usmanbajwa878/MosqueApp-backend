@@ -36,7 +36,7 @@ exports.CreateMosque= async (req, res) => {
     }
 }
 
-
+//find mosque by name and phoneNumber
 exports.FindMosque = async (req, res) => {
     try {
         const result = await findMosque(req, res);
@@ -67,6 +67,7 @@ exports.DeleteMosque = async (req, res) => {
         return res.status(FAILED).json(generateMessage(error.message, FAILED, SUCCESS_FALSE, null))
     }
 }
+//find mosque by any key
 exports.FindMosqueByAnyKey = async (req, res) => {
     try {
         const result = await findMosqueByAnykey(req, res);

@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 
 const userController = require("./Controllers/UserController");
 const mosqueController = require("./Controllers/MosqueController");
+const requestController = require("./Controllers/requestController");
 const fileUploadController = require("./Controllers/FileController");
 
 const {
@@ -13,7 +14,9 @@ const {
   MOSQUE,
   FILE_UPLOAD,
   FILE_UPLOAD_UPLOAD,
+  REQUEST,
 } = require("./Constants/Routes");
+const { IMAGE_UPLOAD } = require("./utils/storage");
 
 mongoose
   .connect(process.env.DATABASE_URL, {
@@ -48,7 +51,7 @@ app.use((req, res, next) => {
 app.use(USER, userController.LOGIN);
 app.use(USER, userController.SIGNUP);
 app.use(USER, userController.CHANGE_PASSWORD);
-//VEHICLES
+//MOSQES
 app.use(MOSQUE, mosqueController.GET_ALL_MOSQUE);
 app.use(MOSQUE, mosqueController.GET_MOSQUE_BY_ID);
 app.use(MOSQUE, mosqueController.FIND_SPECFIC_MOSQUE);
@@ -56,6 +59,12 @@ app.use(MOSQUE, mosqueController.CREATE_MOSQUE);
 app.use(MOSQUE, mosqueController.UPDATE_MOSQUE);
 app.use(MOSQUE, mosqueController.FIND_MOSQUE_BY_ANY);
 app.use(MOSQUE, mosqueController.DELETE_MOSQUE);
+// REQUESTS
+app.use(REQUEST, requestController.GET_ALL_REQUEST);
+app.use(REQUEST, requestController.GET_REQUEST_BY_USER);
+app.use(REQUEST, requestController.CREATE_REQUEST);
+app.use(REQUEST, requestController.DELETE_REQUEST);
+app.use(FILE_UPLOAD,fileUploadController.FILE_UPLOAD_REQUEST)
 
 app.use(express.static(__dirname + "/public"));
 app.use("/uploads", express.static("uploads"));

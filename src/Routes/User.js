@@ -33,7 +33,7 @@ exports.SignUp = async (req, res) => {
             const user = await createUser(req);
             console.log("saving user",user)
             await user.save();
-            return res.status(OK).json(generateMessage(USER_SUCCESS_SIGNUP, OK, SUCCESS_TRUE, null));
+            return res.status(OK).json(generateMessage(USER_SUCCESS_SIGNUP, OK, SUCCESS_TRUE, user));
         }
         return res.status(FAILED).json(generateMessage(USER_EXISTS, FAILED, SUCCESS_FALSE, null));
     }

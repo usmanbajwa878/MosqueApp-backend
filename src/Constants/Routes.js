@@ -19,3 +19,11 @@ exports.FILE_UPLOAD = '/fileUpload';
 exports.FILE_UPLOAD_UPLOAD = '/upload';
 exports.GET_FILE = '/file/';
 
+exports.REQUEST = '/request';
+exports.REQUEST_POST = '/newrequest';
+exports.REQUEST_GET_BY_USER = '/getrequest';
+exports.REQUEST_GET_ALL = '/getAllrequest';
+exports.REQUEST_DELETE = '/delete';
+
+
+

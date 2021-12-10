@@ -10,15 +10,19 @@
   "author": "usman bajwa",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/storage": "^5.16.1",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "dotenv": "^8.6.0",
     "express": "^4.17.1",
+    "firebase": "^9.6.0",
+    "firebase-admin": "^10.0.0",
     "mongoose": "^5.11.13",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "nodemon": "^2.0.7",
     "translate": "^1.4.0",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12"
   }
 }

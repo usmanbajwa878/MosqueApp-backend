@@ -1,5 +1,14 @@
 const multer = require('multer');
 
+var admin = require("firebase-admin");
+
+var serviceAccount = require("../mosqueapp-63cfb-firebase-adminsdk-k6n1e-311203377f.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+
 var Storage = multer.diskStorage({
     destination: function(req, file, callback) {
         callback(null, './uploads');

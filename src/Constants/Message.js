@@ -20,3 +20,11 @@ exports.MOSQUE_DELETED_SUCCESS = 'Mosque deleted Successfully';
 
 exports.FILE_UPLOAD_SUCCESS = 'File Uploaded Successfully';
 exports.FILE_UPLOAD_FAILED = 'File Upload Failed';
+
+exports.REQUEST_SUCCESS_UPDATE = 'Request updated Successfully';
+exports.REQUEST_FAILED_UPDATE = 'Request updation Failed';
+exports.REQUEST_SUCCESS_POST = 'Request save Successfully';
+exports.REQUEST_SUCCESS_GET = 'Request found';
+exports.REQUEST_EXISTS = 'Request is Already Registesred';
+exports.REQUEST_NOT_EXISTS = 'Request not exists';
+exports.REQUEST_DELETED_SUCCESS = 'Request deleted Successfully';
